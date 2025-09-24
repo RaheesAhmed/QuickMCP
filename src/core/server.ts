@@ -23,6 +23,7 @@ import type {
 } from '../types/index.js';
 import { logger } from '../utils/logger.js';
 import { Response } from '../utils/response.js';
+import { schemaCache, SchemaCache } from './performance/cache-manager.js';
 
 /**
  * Registry for storing all registered handlers

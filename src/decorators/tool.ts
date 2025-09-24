@@ -14,8 +14,8 @@ const promptRegistry = new Map<string, { config: PromptConfig; handler: PromptHa
  * Tool decorator - marks a method as an MCP tool
  */
 export function tool(config: ToolConfig | string) {
-  return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-    const originalMethod = descriptor.value;
+  return function (target: any, propertyKey: string, descriptor?: PropertyDescriptor) {
+    const originalMethod = descriptor?.value || target[propertyKey];
     const toolName = propertyKey;
     
     // Handle string shorthand
