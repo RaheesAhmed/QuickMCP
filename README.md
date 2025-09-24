@@ -293,7 +293,7 @@ return [Response.text("Hi"), Response.json(data)];
 
 1. **Install QuickMCP**
    ```bash
-   npm install quickmcp
+   npm install quickmcp-sdk
    ```
 
 2. **Create your first server**
