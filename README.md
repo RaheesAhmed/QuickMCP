@@ -316,13 +316,24 @@ return [Response.text("Hi"), Response.json(data)];
    node examples/04-test-client/test-client.js
    ```
 
+## 📚 Complete Documentation
+
+For comprehensive documentation including all patterns, examples, and best practices, see our **[Complete LLM Guide](llm.md)** - designed specifically for AI models and developers to understand and implement QuickMCP servers effectively.
+
+**What's in the LLM Guide:**
+- 📖 Complete API reference with examples
+- 🛠️ Advanced patterns and best practices
+- 🏗️ Enterprise server implementations
+- 🎯 Real-world use cases and solutions
+- 🚀 Performance optimization techniques
+
 ##  Contributing
 
 We welcome contributions! Please see our contributing guidelines for details.
 
 ##  License
 
-MIT License - see LICENSE file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
