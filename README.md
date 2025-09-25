@@ -19,13 +19,13 @@ QuickMCP is a simplified TypeScript SDK for MCP (Model Context Protocol) develop
 ##  Quick Start
 
 ```bash
-npm install quickmcp
+npm install quickmcp-sdk
 ```
 
 ### Basic Server (30 seconds)
 
 ```typescript
-import { createServer, Responses, Schema } from 'quickmcp';
+import { createServer, Responses, Schema } from 'quickmcp-sdk';
 
 const server = createServer({ name: 'my-server' });
 
@@ -43,7 +43,7 @@ await server.start();
 ### Enterprise HTTP Server
 
 ```typescript
-import { createServer, Responses, Resources, Prompts } from 'quickmcp';
+import { createServer, Responses, Resources, Prompts } from 'quickmcp-sdk';
 
 const server = createServer({
   name: 'enterprise-api',
@@ -106,7 +106,7 @@ await server.start();
 ### Authentication & Security
 
 ```typescript
-import { AuthMiddleware, RateLimitMiddleware } from 'quickmcp/middleware';
+import { AuthMiddleware, RateLimitMiddleware } from 'quickmcp-sdk/middleware';
 
 // JWT Authentication
 const auth = new AuthMiddleware({
@@ -127,7 +127,7 @@ server.use(rateLimit.middleware);
 ### Real-time Metrics
 
 ```typescript
-import { MetricsMiddleware } from 'quickmcp/middleware';
+import { MetricsMiddleware } from 'quickmcp-sdk/middleware';
 
 const metrics = new MetricsMiddleware();
 server.use(metrics.middleware);
@@ -146,7 +146,7 @@ console.log(metrics.getMetrics());
 ### Performance Optimizations
 
 ```typescript
-import { schemaCache, responsePool } from 'quickmcp/performance';
+import { schemaCache, responsePool } from 'quickmcp-sdk/performance';
 
 // Automatic schema caching (90% faster validation)
 // Automatic response object pooling (60% less memory)
