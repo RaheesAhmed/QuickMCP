@@ -1,8 +1,21 @@
-# QuickMCP 
+<div align="center">
+  <img src="assets/logo.svg" alt="QuickMCP-SDK Logo" width="600">
+  
+  <p align="center">
+    <strong>The easiest way to build MCP servers in TypeScript</strong>
+  </p>
+  
+  <p align="center">
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-key-features">Features</a> •
+    <a href="#-examples">Examples</a> •
+    <a href="llm.md">Documentation</a>
+  </p>
+</div>
 
-**The easiest way to build MCP servers in TypeScript**
+---
 
-QuickMCP is a simplified TypeScript SDK for MCP (Model Context Protocol) development that removes complexity while providing powerful features. Build MCP servers in minutes, not hours.
+QuickMCP-SDK is a simplified TypeScript SDK for MCP (Model Context Protocol) development that removes complexity while providing powerful features. Build MCP servers in minutes, not hours.
 
 ##  Key Features
 
