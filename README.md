@@ -279,29 +279,9 @@ return [Response.text("Hi"), Response.json(data)];
 
 ## 🚦 Getting Started
 
-1. **Install QuickMCP**
+**Install QuickMCP**
    ```bash
    npm install quickmcp-sdk
-   ```
-
-2. **Create your first server**
-   ```bash
-   npx quickmcp create my-server
-   cd my-server && npm install
-   ```
-
-3. **Start development**
-   ```bash
-   npm run dev
-   ```
-
-4. **Test with examples**
-   ```bash
-   # Terminal 1: Start server
-   node examples/03-enterprise-api/index.ts
-   
-   # Terminal 2: Test client
-   node examples/04-test-client/test-client.js
    ```
 
 ## 📚 Complete Documentation
