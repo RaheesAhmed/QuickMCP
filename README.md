@@ -169,31 +169,6 @@ console.log(schemaCache.getStats());
 // { hits: 1580, misses: 23, hitRate: 0.985 }
 ```
 
-##  Developer Experience
-
-### CLI Tools
-
-```bash
-# Create new project
-npx quickmcp create my-server --template=enterprise
-cd my-server
-
-# Development with hot reload
-npx quickmcp dev --port=3000
-
-# Build for production  
-npx quickmcp build
-
-# Run tests
-npx quickmcp test --coverage
-```
-
-### Project Templates
-
-- **`basic`**: Simple STDIO server for getting started
-- **`enterprise`**: Full HTTP server with auth, metrics, docker support
-- **`api`**: REST API integration patterns
-- **`ai-assistant`**: AI/LLM integration examples
 
 ##  Examples
 
