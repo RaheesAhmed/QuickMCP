@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/raheesahmed-quickmcp-badge.png)](https://mseep.ai/app/raheesahmed-quickmcp)
+
 <div align="center">
   <img src="assets/logo.svg" alt="QuickMCP-SDK Logo" width="600">
   
