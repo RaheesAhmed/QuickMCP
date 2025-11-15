@@ -1,6 +1,6 @@
 {
   "name": "quickmcp-sdk",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "A simplified TypeScript SDK for MCP development without complexity",
   "type": "module",
   "main": "./dist/src/index.js",

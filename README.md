@@ -206,6 +206,31 @@ node examples/04-test-client/test-client.js
 - Session management
 - All primitive types (tools, resources, prompts)
 
+### 5. Filesystem MCP Server
+```bash
+node examples/05-filesystem-mcp-server/index.js
+```
+- File operations (read, write, list, search)
+- Directory management
+- Resource templates for file access
+- Full filesystem integration
+
+### 6. Remote HTTP Server ✨ NEW
+```bash
+# Terminal 1 - Start server
+node examples/06-remote-http-server/index.ts
+
+# Terminal 2 - Test client
+node examples/06-remote-http-server/test-client.js
+```
+- **Modern Streamable HTTP transport**
+- **Session management** for stateful connections
+- **CORS enabled** for browser access
+- **Multiple concurrent clients** support
+- **Real-time SSE notifications**
+- Complete with test client and documentation
+- Production-ready HTTP MCP server example
+
 ##  Why Choose QuickMCP?
 
 | Feature | QuickMCP | Official SDK | FastMCP (Python) |

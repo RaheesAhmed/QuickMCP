@@ -319,8 +319,15 @@ export class QuickMCPServer {
       ...(prompt.config.title && { title: prompt.config.title })
     };
     
-    // Cast the handler to match the expected type
-    this.mcpServer.registerPrompt(prompt.name, promptConfig, prompt.handler as any);
+    // Wrap handler to ensure proper return type
+    this.mcpServer.registerPrompt(
+      prompt.name, 
+      promptConfig, 
+      async (args: any) => {
+        const result = await prompt.handler(args);
+        return result;
+      }
+    );
   }
 
   /**

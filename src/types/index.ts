@@ -91,6 +91,8 @@ export interface PromptResponse {
       text: string;
     };
   }>;
+  description?: string;
+  [key: string]: unknown;
 }
 
 /**

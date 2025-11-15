@@ -4,17 +4,18 @@ This guide provides comprehensive information about QuickMCP SDK for Language Mo
 
 ## Table of Contents
 1. [Overview & Core Concepts](#overview--core-concepts)
-2. [Installation & Setup](#installation--setup)
-3. [Server Creation](#server-creation)
-4. [Tools Implementation](#tools-implementation)
-5. [Resources Implementation](#resources-implementation)
-6. [Prompts Implementation](#prompts-implementation)
-7. [Schema Definition](#schema-definition)
-8. [Response Patterns](#response-patterns)
-9. [Advanced Features](#advanced-features)
-10. [Complete Examples](#complete-examples)
-11. [Best Practices](#best-practices)
-12. [Common Patterns](#common-patterns)
+2. [Recent Updates & Fixes](#recent-updates--fixes)
+3. [Installation & Setup](#installation--setup)
+4. [Server Creation](#server-creation)
+5. [Tools Implementation](#tools-implementation)
+6. [Resources Implementation](#resources-implementation)
+7. [Prompts Implementation](#prompts-implementation)
+8. [Schema Definition](#schema-definition)
+9. [Response Patterns](#response-patterns)
+10. [Advanced Features](#advanced-features)
+11. [Complete Examples](#complete-examples)
+12. [Best Practices](#best-practices)
+13. [Common Patterns](#common-patterns)
 
 ## Overview & Core Concepts
 
@@ -32,6 +33,98 @@ QuickMCP SDK is a TypeScript framework for building MCP (Model Context Protocol)
 - **Simplified API** with intuitive patterns
 - **Enterprise features** (auth, rate limiting, metrics)
 - **Dual transport** (HTTP and STDIO)
+
+## Recent Updates & Fixes
+
+### Latest Updates (v1.0.3)
+
+#### 🔧 Core Fixes
+1. **Prompt Handler Type Compatibility** - Fixed TypeScript type issues with prompt registration
+   - Added proper type definitions to `PromptResponse` interface
+   - Added index signature `[key: string]: unknown` for MCP SDK compatibility
+   - Removed unsafe type casting in favor of proper type handling
+
+2. **Build System** - Verified and tested TypeScript compilation
+   - All examples now compile without errors
+   - Type safety improved across the codebase
+
+#### ✨ New Features
+
+**Remote HTTP Server Example (Example #6)**
+- Complete production-ready HTTP MCP server implementation
+- Modern **Streamable HTTP transport** (latest MCP protocol)
+- **Session management** for stateful connections
+- **CORS enabled** for browser and web client access
+- **Multiple concurrent clients** support
+- **Real-time SSE notifications** for server-to-client events
+- Comprehensive test client included
+- Full documentation and usage examples
+
+**Location:** `examples/06-remote-http-server/`
+
+**What's Included:**
+- `index.ts` - Full HTTP server with 4 tools, 2 resources, 1 prompt
+- `test-client.js` - Complete test suite demonstrating all features
+- `README.md` - Comprehensive documentation with curl examples
+
+**Key Features:**
+```typescript
+const server = createServer({
+  name: 'remote-http-server',
+  transport: 'http',
+  http: {
+    port: 3000,
+    enableCors: true,
+    corsOrigin: '*',
+    sessionManagement: true
+  }
+});
+```
+
+**Tools Provided:**
+- `get_server_info` - Server information and capabilities
+- `echo` - Echo service with repetition (great for testing)
+- `calculate` - Arithmetic operations (add, subtract, multiply, divide)
+- `get_timestamp` - Current time in multiple formats (ISO, Unix, locale)
+
+**Resources Provided:**
+- `status://server` - Real-time server metrics and status
+- `docs://api` - API documentation
+
+**Prompts Provided:**
+- `generate_greeting` - Multi-style greeting generator (formal, casual, friendly)
+
+**Quick Start:**
+```bash
+# Terminal 1 - Start server
+npm run build
+node examples/06-remote-http-server/index.ts
+
+# Terminal 2 - Test with client
+node examples/06-remote-http-server/test-client.js
+
+# Or use MCP Inspector
+npx @modelcontextprotocol/inspector http://localhost:3000/mcp
+```
+
+#### 🎯 What Was Fixed
+
+**Before:**
+- Prompt handlers had type casting issues leading to potential runtime errors
+- TypeScript compilation warnings in production code
+- MCP SDK compatibility issues with prompt responses
+
+**After:**
+- ✅ Clean TypeScript compilation with no errors
+- ✅ Proper type safety throughout the codebase
+- ✅ Full MCP SDK compatibility
+- ✅ Production-ready HTTP server example
+- ✅ Complete testing infrastructure
+
+#### 📚 Updated Documentation
+- README.md now includes Example #6 (Remote HTTP Server)
+- llm.md updated with latest fixes and new example documentation
+- Comprehensive API documentation for HTTP transport
 
 ## Installation & Setup
 
@@ -981,4 +1074,3 @@ server.prompt('assistantChat', async (args) => {
   schema: { context: 'string', userMessage: 'string', assistantPersonality: 'string' }
 });
 ```
-
