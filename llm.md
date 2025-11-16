@@ -128,8 +128,27 @@ npx @modelcontextprotocol/inspector http://localhost:3000/mcp
 
 ## Installation & Setup
 
+### Installation
+
 ```bash
-npm install quickmcp-sdk
+# Install the latest version from npm
+npm install quickmcp-sdk@latest
+
+# Or with yarn
+yarn add quickmcp-sdk@latest
+
+# Or with pnpm
+pnpm add quickmcp-sdk@latest
+```
+
+### Verify Installation
+
+```bash
+# Check installed version
+npm list quickmcp-sdk
+
+# Test basic import
+node -e "const { createServer } = require('quickmcp-sdk'); console.log('✅ QuickMCP installed successfully!');"
 ```
 
 ### Basic Import Pattern

@@ -31,8 +31,17 @@ QuickMCP-SDK is a simplified TypeScript SDK for MCP (Model Context Protocol) dev
 
 ##  Quick Start
 
+### Installation
+
 ```bash
-npm install quickmcp-sdk
+# Install the latest version from npm
+npm install quickmcp-sdk@latest
+
+# Or with yarn
+yarn add quickmcp-sdk@latest
+
+# Or with pnpm
+pnpm add quickmcp-sdk@latest
 ```
 
 ### Basic Server (30 seconds)
