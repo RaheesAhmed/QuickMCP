@@ -342,7 +342,8 @@ export class QuickMCPServer {
     try {
       if (this.config.transport === 'stdio') {
         await this.startStdioServer();
-      } else if (this.config.transport === 'sse') {
+      } else if (this.config.transport === 'http' || this.config.transport === 'sse') {
+        // Note: 'sse' is deprecated name, kept for backwards compatibility
         await this.startHttpServer();
       } else {
         throw new Error(`Unsupported transport: ${this.config.transport}`);

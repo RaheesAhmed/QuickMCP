@@ -14,7 +14,7 @@ import { createServer, Responses, Resources, Schema } from '../../dist/src/index
 // Create HTTP server with session management
 const server = createServer({
   name: 'remote-http-server',
-  transport: 'sse',
+  transport: 'http', // Streamable HTTP transport (formerly 'sse')
   debug: true,
   http: {
     port: 3000,

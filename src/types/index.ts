@@ -14,7 +14,7 @@ export interface HttpServerConfig {
 export interface ServerConfig {
   name: string;
   version?: string;
-  transport?: 'stdio' | 'sse';
+  transport?: 'stdio' | 'http' | 'sse'; // 'sse' deprecated, use 'http' for Streamable HTTP
   autoStart?: boolean;
   debug?: boolean;
   http?: HttpServerConfig;
