@@ -68,7 +68,7 @@ export function createHttpServer(name: string, port = 3000) {
   const { createServer } = require('./core/server.js');
   return createServer({ 
     name, 
-    transport: 'http',
+    transport: 'sse',
     http: { port }
   });
 }

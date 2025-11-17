@@ -126,7 +126,7 @@ class ApiService {
 
 const server = createServer({
   name: 'enterprise-mcp-server',
-  transport: 'http',
+  transport: 'sse',
   http: {
     port: 3000,
     enableCors: true,

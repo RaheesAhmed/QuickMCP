@@ -14,7 +14,7 @@ export interface HttpServerConfig {
 export interface ServerConfig {
   name: string;
   version?: string;
-  transport?: 'stdio' | 'http';
+  transport?: 'stdio' | 'sse';
   autoStart?: boolean;
   debug?: boolean;
   http?: HttpServerConfig;
